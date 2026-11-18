@@ -1,3 +1,4 @@
+
 [
   {
     "id": 13,
@@ -106,9 +107,7 @@
     "image_path": "azur_product_01.png",
     "category": "문구·생활",
     "price_tbd": 1,
-    "detail_images": [
-      "azur_goods_new.png"
-    ]
+    "detail_images": ["azur_goods_new.png"]
   },
   {
     "id": 2,
@@ -121,9 +120,7 @@
     "image_path": "azur_product_02.png",
     "category": "서적·인쇄물",
     "price_tbd": 1,
-    "detail_images": [
-      "azur_goods_new.png"
-    ]
+    "detail_images": ["azur_goods_new.png"]
   },
   {
     "id": 3,
@@ -136,9 +133,7 @@
     "image_path": "azur_product_03.png",
     "category": "아크릴",
     "price_tbd": 1,
-    "detail_images": [
-      "azur_goods_new.png"
-    ]
+    "detail_images": ["azur_goods_new.png"]
   },
   {
     "id": 4,
@@ -151,9 +146,7 @@
     "image_path": "azur_product_04.png",
     "category": "아크릴",
     "price_tbd": 1,
-    "detail_images": [
-      "azur_goods_new.png"
-    ]
+    "detail_images": ["azur_goods_new.png"]
   },
   {
     "id": 5,
@@ -166,9 +159,7 @@
     "image_path": "azur_product_05.png",
     "category": "의류·잡화",
     "price_tbd": 1,
-    "detail_images": [
-      "azur_goods_new.png"
-    ]
+    "detail_images": ["azur_goods_new.png"]
   },
   {
     "id": 6,
@@ -181,9 +172,7 @@
     "image_path": "azur_product_06.png",
     "category": "문구·생활",
     "price_tbd": 1,
-    "detail_images": [
-      "azur_goods_new.png"
-    ]
+    "detail_images": ["azur_goods_new.png"]
   },
   {
     "id": 7,
@@ -196,9 +185,7 @@
     "image_path": "azur_product_07.png",
     "category": "의류·잡화",
     "price_tbd": 1,
-    "detail_images": [
-      "azur_goods_new.png"
-    ]
+    "detail_images": ["azur_goods_new.png"]
   },
   {
     "id": 8,
@@ -211,9 +198,7 @@
     "image_path": "azur_product_08.png",
     "category": "아크릴",
     "price_tbd": 1,
-    "detail_images": [
-      "azur_goods_new.png"
-    ]
+    "detail_images": ["azur_goods_new.png"]
   },
   {
     "id": 9,
@@ -226,9 +211,7 @@
     "image_path": "azur_product_09.png",
     "category": "아크릴",
     "price_tbd": 1,
-    "detail_images": [
-      "azur_goods_new.png"
-    ]
+    "detail_images": ["azur_goods_new.png"]
   },
   {
     "id": 10,
@@ -241,9 +224,7 @@
     "image_path": "azur_product_10.png",
     "category": "의류·잡화",
     "price_tbd": 1,
-    "detail_images": [
-      "azur_goods_new.png"
-    ]
+    "detail_images": ["azur_goods_new.png"]
   },
   {
     "id": 11,
@@ -256,9 +237,7 @@
     "image_path": "azur_product_11.png",
     "category": "의류·잡화",
     "price_tbd": 1,
-    "detail_images": [
-      "azur_goods_new.png"
-    ]
+    "detail_images": ["azur_goods_new.png"]
   },
   {
     "id": 12,
@@ -271,9 +250,7 @@
     "image_path": "azur_product_12.png",
     "category": "배지·키링",
     "price_tbd": 1,
-    "detail_images": [
-      "azur_goods_new.png"
-    ]
+    "detail_images": ["azur_goods_new.png"]
   },
   {
     "id": 21,
@@ -287,9 +264,7 @@
     "image_path": "genie_cd_player.jpg",
     "category": "음반·오디오",
     "price_tbd": 0,
-    "detail_images": [
-      "genie_cd_player_detail.jpg"
-    ],
+    "detail_images": ["genie_cd_player_detail.jpg"],
     "description": "교체 가능한 클리어카드 16장 제공. 12가지 컬러 중 취향에 맞게 선택할 수 있는 니케 CD 플레이어."
   },
   {
@@ -304,9 +279,7 @@
     "image_path": "genie_arkvive.jpg",
     "category": "음반·오디오",
     "price_tbd": 0,
-    "detail_images": [
-      "genie_arkvive_detail.jpg"
-    ],
+    "detail_images": ["genie_arkvive_detail.jpg"],
     "description": "니케 스토리 음악 250곡을 수록한 CD 10장 구성. 아트북(140×188mm, 표지 포함 64페이지), 홀로그램 포토카드(55×85mm), 주얼 케이스(140×188×37mm), 와이드 렌티큘러 카드(140×188mm)가 안내 이미지에 포함되어 있음."
   },
   {
