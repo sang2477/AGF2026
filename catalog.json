@@ -103,7 +103,7 @@
     "spec": "가격·구매 제한 미공개 · 공식 안내 이미지 참고",
     "limit_qty": 99,
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image_path": "azur_product_01.png",
+    "image_path": "azur_item_01.png",
     "category": "문구·생활",
     "price_tbd": 1
   },
@@ -115,7 +115,7 @@
     "spec": "가격·구매 제한 미공개 · 공식 안내 이미지 참고",
     "limit_qty": 99,
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image_path": "azur_product_02.png",
+    "image_path": "azur_item_02.png",
     "category": "서적·인쇄물",
     "price_tbd": 1
   },
@@ -127,7 +127,7 @@
     "spec": "가격·구매 제한 미공개 · 공식 안내 이미지 참고",
     "limit_qty": 99,
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image_path": "azur_product_03.png",
+    "image_path": "azur_item_03.png",
     "category": "아크릴",
     "price_tbd": 1
   },
@@ -139,7 +139,7 @@
     "spec": "가격·구매 제한 미공개 · 공식 안내 이미지 참고",
     "limit_qty": 99,
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image_path": "azur_product_04.png",
+    "image_path": "azur_item_04.png",
     "category": "아크릴",
     "price_tbd": 1
   },
@@ -151,7 +151,7 @@
     "spec": "가격·구매 제한 미공개 · 공식 안내 이미지 참고",
     "limit_qty": 99,
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image_path": "azur_product_05.png",
+    "image_path": "azur_item_05.png",
     "category": "의류·잡화",
     "price_tbd": 1
   },
@@ -163,7 +163,7 @@
     "spec": "가격·구매 제한 미공개 · 공식 안내 이미지 참고",
     "limit_qty": 99,
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image_path": "azur_product_06.png",
+    "image_path": "azur_item_06png",
     "category": "문구·생활",
     "price_tbd": 1
   },
@@ -175,7 +175,7 @@
     "spec": "가격·구매 제한 미공개 · 공식 안내 이미지 참고",
     "limit_qty": 99,
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image_path": "azur_product_07.png",
+    "image_path": "azur_item_07.png",
     "category": "의류·잡화",
     "price_tbd": 1
   },
@@ -187,7 +187,7 @@
     "spec": "가격·구매 제한 미공개 · 공식 안내 이미지 참고",
     "limit_qty": 99,
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image_path": "azur_product_08.png",
+    "image_path": "azur_item_08.png",
     "category": "아크릴",
     "price_tbd": 1
   },
@@ -199,7 +199,7 @@
     "spec": "가격·구매 제한 미공개 · 공식 안내 이미지 참고",
     "limit_qty": 99,
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image_path": "azur_product_09.png",
+    "image_path": "azur_item_09.png",
     "category": "아크릴",
     "price_tbd": 1
   },
@@ -211,7 +211,7 @@
     "spec": "가격·구매 제한 미공개 · 공식 안내 이미지 참고",
     "limit_qty": 99,
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image_path": "azur_product_10.png",
+    "image_path": "azur_item_10.png",
     "category": "의류·잡화",
     "price_tbd": 1
   },
@@ -223,7 +223,7 @@
     "spec": "가격·구매 제한 미공개 · 공식 안내 이미지 참고",
     "limit_qty": 99,
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image_path": "azur_product_11.png",
+    "image_path": "azur_item_11.png",
     "category": "의류·잡화",
     "price_tbd": 1
   },
