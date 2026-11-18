@@ -163,7 +163,7 @@
     "spec": "가격·구매 제한 미공개 · 공식 안내 이미지 참고",
     "limit_qty": 99,
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image_path": "azur_item_06png",
+    "image_path": "azur_item_06.png",
     "category": "문구·생활",
     "price_tbd": 1
   },
@@ -235,7 +235,7 @@
     "spec": "가격·구매 제한 미공개 · 공식 안내 이미지 참고",
     "limit_qty": 99,
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image_path": "azur_product_12.png",
+    "image_path": "azur_item_12.png",
     "category": "배지·키링",
     "price_tbd": 1
   },

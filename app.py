@@ -8,7 +8,6 @@ ROOT = Path(__file__).resolve().parent
 st.set_page_config(page_title='AGF 2026 개인 굿즈 보관함', page_icon='🎁', layout='wide')
 st.markdown('''<style>.block-container{max-width:1050px;padding:1rem .8rem} @media(max-width:650px){.block-container{padding-top:.6rem}} </style>''', unsafe_allow_html=True)
 
-@st.cache_data
 def load():
     return json.loads((ROOT/'catalog.json').read_text(encoding='utf-8')),json.loads((ROOT/'events.json').read_text(encoding='utf-8'))
 products,events=load()
