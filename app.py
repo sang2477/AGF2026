@@ -62,7 +62,7 @@ with t1:
                 st.write('**가격 미정**' if p.get('price_tbd') else f"**{p['price']:,}원**")
                 if p.get('spec'):st.caption(p['spec'])
                 if p.get('description'):st.write(p['description'])
-                if p.get('detail_images'):
+                if p['company'] != '아주르 프로밀리아' and p.get('detail_images'):
                     with st.expander('📷 상세 사진 보기'):
                         for detail in p['detail_images']:
                             picture(detail)
