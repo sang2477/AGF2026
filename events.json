@@ -21,7 +21,7 @@
     "title": "스탬프 랠리 로그인",
     "kind": "스탬프 랠리",
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image": "azur_stamp_original.jpg"
+    "image": "azur_event_missions_new.png"
   },
   {
     "id": "azur_sns",
@@ -29,7 +29,7 @@
     "title": "SNS 구독",
     "kind": "스탬프 랠리",
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image": "azur_stamp_original.jpg"
+    "image": "azur_event_missions_new.png"
   },
   {
     "id": "azur_game1",
@@ -37,7 +37,7 @@
     "title": "철갑 구르미 체험",
     "kind": "스탬프 랠리",
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image": "azur_stamp_original.jpg"
+    "image": "azur_event_missions_new.png"
   },
   {
     "id": "azur_game2",
@@ -45,7 +45,7 @@
     "title": "노노의 파워 해머",
     "kind": "스탬프 랠리",
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image": "azur_stamp_original.jpg"
+    "image": "azur_event_missions_new.png"
   },
   {
     "id": "azur_extra_login",
@@ -53,7 +53,7 @@
     "title": "아주르 프로밀리아 로그인",
     "kind": "스탬프 랠리",
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image": "azur_stamp_original.jpg"
+    "image": "azur_event_missions_new.png"
   },
   {
     "id": "azur_extra_sns",
@@ -61,7 +61,7 @@
     "title": "SNS 업로드 이벤트",
     "kind": "스탬프 랠리",
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image": "azur_stamp_original.jpg"
+    "image": "azur_event_missions_new.png"
   },
   {
     "id": "azur_reward1",
@@ -69,7 +69,7 @@
     "title": "아비 원형 가방 수령",
     "kind": "경품 수령",
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image": "azur_stamp_original.jpg"
+    "image": "azur_event_rewards_new.png"
   },
   {
     "id": "azur_reward2",
@@ -77,7 +77,7 @@
     "title": "대형 트롤리 가방 수령",
     "kind": "경품 수령",
     "source": "https://azurpromilia.nexon.com/events/2026/11/agf2026?introset=true",
-    "image": "azur_stamp_original.jpg"
+    "image": "azur_event_rewards_new.png"
   },
   {
     "id": "genie_title_bonus",

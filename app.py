@@ -108,7 +108,13 @@ with t3:
     for company in sorted({e['company'] for e in matching}):
         st.markdown(f'#### {company}')
         group=[e for e in matching if e['company']==company]
-        if group[0].get('image'):picture(group[0]['image'])
+        if company=='아주르 프로밀리아':
+            with st.expander('🖼️ 아주르 이벤트 안내 이미지 3장',expanded=True):
+                st.caption('특별 교역소 · 스탬프 랠리 보상 · 미션 안내')
+                for img in ('azur_event_prizes_new.png','azur_event_rewards_new.png','azur_event_missions_new.png'):
+                    picture(img)
+        elif group[0].get('image'):
+            picture(group[0]['image'])
         for e in group:
             with st.container(border=True):
                 st.caption(e.get('kind','이벤트'))
