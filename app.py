@@ -15,8 +15,8 @@ def picture(name):
     p=ROOT/'assets'/name
     if name and p.is_file():st.image(str(p),use_container_width=True)
 
-st.title('🎁 AGF 2026 굿즈·이벤트 카탈로그')
-st.caption('모바일 지원 · 장바구니는 현재 접속 중에만 유지되며 새 접속 시 초기화됩니다.')
+st.title('🎁 AGF 2026 굿즈·이벤트 안내')
+st.caption('로그인 없음 · 개인정보 수집 없음 · 모바일 지원 · 장바구니는 현재 접속 중에만 유지되며 새 접속 시 초기화됩니다.')
 t1,t2,t3,t4=st.tabs(['🛍️ 굿즈 카테고리','🧾 장바구니','🎁 무료·이벤트 카테고리','🗺️ 배치도'])
 with t1:
     companies=sorted({p['company'] for p in products})
@@ -60,6 +60,17 @@ with t2:
     rows=[{'업체':p['company'],'상품':p['name'],'수량':cart[str(p['id'])],'단가':'미정' if p.get('price_tbd') else p['price'],'소계':'미정' if p.get('price_tbd') else p['price']*cart[str(p['id'])]} for p in selected]
     if rows:
         st.dataframe(rows,hide_index=True,use_container_width=True)
+        st.subheader('🗑️ 장바구니 상품 삭제')
+        for p in selected:
+            pid = str(p['id'])
+            name_col, delete_col = st.columns([4, 1])
+            with name_col:
+                st.write(f"{p['name']} · {cart[pid]}개")
+            with delete_col:
+                if st.button('삭제', key=f'delete_{pid}', use_container_width=True):
+                    st.session_state.cart.pop(pid, None)
+                    st.session_state[f'qty_{pid}'] = 0
+                    st.rerun()
     else:st.info('아직 선택한 굿즈가 없어.')
     genie_sum=sum(p['price']*cart[str(p['id'])] for p in selected if p.get('subcategory')=='지니뮤직 콜라보')
     if genie_sum>0:st.info('지니뮤직 콜라보 구매 특전: 구매자 전원 타이틀별 특전 제공 (현장 수량 한정)')
