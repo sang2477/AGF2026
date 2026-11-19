@@ -69,7 +69,6 @@ with t2:
             with delete_col:
                 if st.button('삭제', key=f'delete_{pid}', use_container_width=True):
                     st.session_state.cart.pop(pid, None)
-                    st.session_state[f'qty_{pid}'] = 0
                     st.rerun()
     else:st.info('아직 선택한 굿즈가 없어.')
     genie_sum=sum(p['price']*cart[str(p['id'])] for p in selected if p.get('subcategory')=='지니뮤직 콜라보')
