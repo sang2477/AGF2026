@@ -1,22 +1,15 @@
-# AGF 2026 굿즈·경품 보관함 — V5.0 통합 수정본
+# AGF 2026 V5.2
 
-## 변경 사항
-- 아주르 프로밀리아 상품 12개의 대표 이미지를 `azur_item_01.png` ~ `azur_item_12.png`로 통일
-- 기존 개별 이미지 `azur_product_*.png`와 전체 굿즈 포스터 `azur_goods_new.png`를 통합본에서 제거
-- 아주르 상품의 상세 사진 영역 제거 (다른 업체 상세 사진은 유지)
-- `catalog.json` 로딩 캐시 제거: 배포 시 구형 JSON이 표시되는 혼란 방지
-- 기존 굿즈 23개, 이벤트, 장바구니, 배치도, 백업 기능 유지
+- 장바구니는 Streamlit `st.session_state`에만 저장됩니다. 브라우저에서 새 세션으로 접속하면 초기화되며 서버/파일에 영구 저장하지 않습니다. 기존 탭에서 Streamlit이 세션을 복구하는 경우에는 잠시 유지될 수 있습니다.
+- 백업/복원 및 장바구니 CSV 저장 버튼 제거
+- 수량 저장 → 장바구니 넣기
+- 무료·이벤트: 체크박스/수령 완료 상태 없이 안내판 형식
+- 배치도 아래 공식 X 링크 목록. 신규 업체 추가 시 `app.py`의 `OFFICIAL_X` 사전에 계정 등록
+- 기존 상품 23개, 이벤트 데이터, 이미지, 니케 상세 이미지 보존
 
-## 기존 GitHub 저장소에 업데이트하기
-1. 압축을 풀고 `app.py`, `catalog.json`, `events.json`, `requirements.txt`, `README.md`, `.streamlit/config.toml`을 기존 저장소에 반영하세요.
-2. `assets/azur_item_01.png`부터 `azur_item_12.png`까지 12개를 업로드하세요. 다른 `assets` 이미지도 기존대로 유지해야 합니다.
-3. GitHub 웹 업로드는 예전 파일을 자동으로 삭제하지 않습니다. `azur_product_*.png` 및 `azur_goods_new.png`는 앱에서 더 이상 사용하지 않으므로 남아 있어도 화면에는 표시되지 않습니다. 필요하면 나중에 삭제하세요.
-4. GitHub에서 Commit한 뒤 Streamlit 앱의 재배포를 확인하고 브라우저 새로고침하세요.
+## 배포
+압축을 풀고 저장소 루트에 `app.py`, `catalog.json`, `events.json`, `assets/`, `.streamlit/`, `requirements.txt`를 반영하세요. `.gitkeep`은 필수 파일이 아닙니다.
 
-## 로컬 실행
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
 
-**참고:** 이 통합본의 아주르 이미지들은 작은 원본을 보정·확대한 것이므로 세부 화질 복원에는 한계가 있습니다.
+## V5.3 변경사항
+배치도 하단 공식 X 링크를 게임 / 피규어·굿즈 샵 두 범주로 분류하고 9개 업체를 추가했습니다. 기존 굿즈·이벤트·장바구니 기능 유지.
