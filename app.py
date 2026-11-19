@@ -15,8 +15,8 @@ def picture(name):
     p=ROOT/'assets'/name
     if name and p.is_file():st.image(str(p),use_container_width=True)
 
-st.title('🎁 AGF 2026 굿즈·이벤트 안내')
-st.caption('로그인 없음 · 개인정보 수집 없음 · 모바일 지원 · 장바구니는 현재 접속 중에만 유지되며 새 접속 시 초기화됩니다.')
+st.title('🎁 AGF 2026 굿즈·이벤트 카탈로그')
+st.caption('모바일 지원 · 장바구니는 현재 접속 중에만 유지되며 새 접속 시 초기화됩니다.')
 t1,t2,t3,t4=st.tabs(['🛍️ 굿즈 카테고리','🧾 장바구니','🎁 무료·이벤트 카테고리','🗺️ 배치도'])
 with t1:
     companies=sorted({p['company'] for p in products})
