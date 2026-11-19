@@ -58,19 +58,55 @@ with t2:
     a.metric('상품 종류',len(selected));b.metric('총 수량',sum(cart[str(p['id'])] for p in selected));c.metric('확정 금액',f'{total:,}원')
     if any(p.get('price_tbd') for p in selected):st.warning('가격 미정 상품은 합계에서 제외했어.')
     rows=[{'업체':p['company'],'상품':p['name'],'수량':cart[str(p['id'])],'단가':'미정' if p.get('price_tbd') else p['price'],'소계':'미정' if p.get('price_tbd') else p['price']*cart[str(p['id'])]} for p in selected]
-    if rows:
-        st.dataframe(rows,hide_index=True,use_container_width=True)
-        st.subheader('🗑️ 장바구니 상품 삭제')
-        for p in selected:
-            pid = str(p['id'])
-            name_col, delete_col = st.columns([4, 1])
-            with name_col:
-                st.write(f"{p['name']} · {cart[pid]}개")
-            with delete_col:
-                if st.button('삭제', key=f'delete_{pid}', use_container_width=True):
+    
+if rows:
+    st.dataframe(
+        rows,
+        hide_index=True,
+        use_container_width=True
+    )
+
+    st.subheader('🛒 장바구니 상품 관리')
+
+    for p in selected:
+        pid = str(p['id'])
+        qty = st.session_state.cart.get(pid, 0)
+
+        if qty <= 0:
+            continue
+
+        name_col, minus_col, delete_col = st.columns([5, 2, 2])
+
+        with name_col:
+            st.write(f"{p['name']} · {qty}개")
+
+        with minus_col:
+            if st.button(
+                '➖ 1개 삭제',
+                key=f'minus_{pid}',
+                use_container_width=True
+            ):
+                current_qty = st.session_state.cart.get(pid, 0)
+
+                if current_qty > 1:
+                    st.session_state.cart[pid] = current_qty - 1
+                else:
                     st.session_state.cart.pop(pid, None)
-                    st.rerun()
-    else:st.info('아직 선택한 굿즈가 없어.')
+
+                st.rerun()
+
+        with delete_col:
+            if st.button(
+                '🗑️ 전체 삭제',
+                key=f'delete_{pid}',
+                use_container_width=True
+            ):
+                st.session_state.cart.pop(pid, None)
+                st.rerun()
+
+else:
+    st.info('아직 선택한 굿즈가 없어.')
+
     genie_sum=sum(p['price']*cart[str(p['id'])] for p in selected if p.get('subcategory')=='지니뮤직 콜라보')
     if genie_sum>0:st.info('지니뮤직 콜라보 구매 특전: 구매자 전원 타이틀별 특전 제공 (현장 수량 한정)')
     if genie_sum>=100000:st.success('지니뮤직 부스 구매금액 10만 원 이상: 쇼핑백 추가 증정 대상 (소진 시 종료)')
