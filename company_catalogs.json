@@ -14,13 +14,10 @@
   "아주르 프로밀리아": {
     "x_url": "https://x.com/AzurPromiliaKR",
     "sales_images": [
-      "azur_goods_new.png",
-      "azur_goods_original.jpg"
+      "azur_2026_full_goods.png"
     ],
     "event_images": [
-      "azur_event_prizes_new.png",
-      "azur_event_rewards_new.png",
-      "azur_event_missions_new.png"
+      "azur_2026_stamp_event.png"
     ],
     "group": "🎮 게임",
     "related_catalogs": []
@@ -60,8 +57,18 @@
   },
   "니벨아레나": {
     "x_url": "https://x.com/NivelArena",
-    "sales_images": [],
-    "event_images": [],
+    "sales_images": [
+      "uploaded_니벨아레나_01.jpg",
+      "uploaded_니벨아레나_02.jpg",
+      "uploaded_니벨아레나_03.jpg",
+      "uploaded_니벨아레나_04.jpg",
+      "uploaded_니벨아레나_05.jpg",
+      "uploaded_니벨아레나_06.jpg",
+      "uploaded_니벨아레나_07.jpg"
+    ],
+    "event_images": [
+      "uploaded_니벨아레나_00.jpg"
+    ],
     "group": "🎮 게임",
     "related_catalogs": []
   },
@@ -81,7 +88,19 @@
   },
   "애니플러스": {
     "x_url": "https://x.com/ANIPLUS_SHOP",
-    "sales_images": [],
+    "sales_images": [
+      "uploaded_애니플러스_30.jpg",
+      "uploaded_애니플러스_31.jpg",
+      "uploaded_애니플러스_32.jpg",
+      "uploaded_애니플러스_33.jpg",
+      "uploaded_애니플러스_34.jpg",
+      "uploaded_애니플러스_35.jpg",
+      "uploaded_애니플러스_36.jpg",
+      "uploaded_애니플러스_37.jpg",
+      "uploaded_애니플러스_38.jpg",
+      "uploaded_애니플러스_39.jpg",
+      "uploaded_애니플러스_40.jpg"
+    ],
     "event_images": [],
     "group": "🎨 피규어·애니",
     "related_catalogs": []
@@ -144,36 +163,62 @@
   },
   "소미미디어": {
     "x_url": "https://x.com/SomyMedia",
-    "sales_images": [],
-    "event_images": [],
+    "sales_images": [
+      "uploaded_소미미디어_14.jpg",
+      "uploaded_소미미디어_15.jpg",
+      "uploaded_소미미디어_16.jpg",
+      "uploaded_소미미디어_17.jpg",
+      "uploaded_소미미디어_18.jpg",
+      "uploaded_소미미디어_19.jpg",
+      "uploaded_소미미디어_20.jpg"
+    ],
+    "event_images": [
+      "uploaded_소미미디어_13.jpg",
+      "uploaded_소미미디어_21.jpg"
+    ],
     "group": "🎨 피규어·애니",
     "related_catalogs": []
   },
   "작혼": {
     "x_url": "https://x.com/MahjongSoul_KR",
-    "sales_images": [],
-    "event_images": [],
+    "sales_images": [
+      "uploaded_작혼_08.jpg"
+    ],
+    "event_images": [
+      "uploaded_작혼_09.jpg"
+    ],
     "group": "🎮 게임",
     "related_catalogs": []
   },
   "스텔라 소라": {
     "x_url": "https://x.com/StellaSoraKR",
-    "sales_images": [],
-    "event_images": [],
+    "sales_images": [
+      "uploaded_스텔라_소라_24.jpg"
+    ],
+    "event_images": [
+      "uploaded_스텔라_소라_22.jpg"
+    ],
     "group": "🎮 게임",
     "related_catalogs": []
   },
   "스토브": {
     "x_url": "https://x.com/sgstove",
     "sales_images": [],
-    "event_images": [],
+    "event_images": [
+      "uploaded_스토브_26.jpg",
+      "uploaded_스토브_27.jpg",
+      "uploaded_스토브_28.jpg",
+      "uploaded_스토브_29.jpg"
+    ],
     "group": "🎮 게임",
     "related_catalogs": []
   },
   "학산문화사": {
     "x_url": "https://x.com/haksan_comic",
     "sales_images": [],
-    "event_images": [],
+    "event_images": [
+      "uploaded_학산문화사_46.jpg"
+    ],
     "group": "🎨 피규어·애니",
     "related_catalogs": []
   },
@@ -189,6 +234,38 @@
     "sales_images": [],
     "event_images": [],
     "group": "🎮 게임",
+    "related_catalogs": []
+  },
+  "명일방주": {
+    "x_url": "",
+    "sales_images": [],
+    "event_images": [
+      "uploaded_명일방주_11.jpg"
+    ],
+    "group": "🎮 게임",
+    "related_catalogs": []
+  },
+  "소녀전선 2: 망명": {
+    "x_url": "",
+    "sales_images": [],
+    "event_images": [
+      "uploaded_소녀전선_2:_망명_12.jpg"
+    ],
+    "group": "🎮 게임",
+    "related_catalogs": []
+  },
+  "이스타에그": {
+    "x_url": "",
+    "sales_images": [
+      "uploaded_이스타에그_42.jpg",
+      "uploaded_이스타에그_43.jpg",
+      "uploaded_이스타에그_44.jpg",
+      "uploaded_이스타에그_45.jpg"
+    ],
+    "event_images": [
+      "uploaded_이스타에그_41.jpg"
+    ],
+    "group": "🎨 피규어·애니",
     "related_catalogs": []
   }
 }
