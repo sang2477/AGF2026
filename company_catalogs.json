@@ -1,3 +1,4 @@
+
 {
   "아스트라에 오라티오": {
     "x_url": "https://x.com/Asora_KR",
@@ -163,17 +164,16 @@
   },
   "소미미디어": {
     "x_url": "https://x.com/SomyMedia",
-    "sales_images": [
+    "sales_images": [],
+    "event_images": [
+      "uploaded_소미미디어_13.jpg",
       "uploaded_소미미디어_14.jpg",
       "uploaded_소미미디어_15.jpg",
       "uploaded_소미미디어_16.jpg",
       "uploaded_소미미디어_17.jpg",
       "uploaded_소미미디어_18.jpg",
       "uploaded_소미미디어_19.jpg",
-      "uploaded_소미미디어_20.jpg"
-    ],
-    "event_images": [
-      "uploaded_소미미디어_13.jpg",
+      "uploaded_소미미디어_20.jpg",
       "uploaded_소미미디어_21.jpg"
     ],
     "group": "🎨 피규어·애니",
@@ -203,12 +203,13 @@
   },
   "스토브": {
     "x_url": "https://x.com/sgstove",
-    "sales_images": [],
+    "sales_images": [
+      "uploaded_스토브_29.jpg"
+    ],
     "event_images": [
       "uploaded_스토브_26.jpg",
       "uploaded_스토브_27.jpg",
-      "uploaded_스토브_28.jpg",
-      "uploaded_스토브_29.jpg"
+      "uploaded_스토브_28.jpg"
     ],
     "group": "🎮 게임",
     "related_catalogs": []
@@ -259,11 +260,11 @@
     "sales_images": [
       "uploaded_이스타에그_42.jpg",
       "uploaded_이스타에그_43.jpg",
-      "uploaded_이스타에그_44.jpg",
       "uploaded_이스타에그_45.jpg"
     ],
     "event_images": [
-      "uploaded_이스타에그_41.jpg"
+      "uploaded_이스타에그_41.jpg",
+      "uploaded_이스타에그_44.jpg"
     ],
     "group": "🎨 피규어·애니",
     "related_catalogs": []
