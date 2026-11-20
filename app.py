@@ -721,7 +721,10 @@ with page3:
 
     st.divider()
 
-    # 기존 배치도
+    # ==========================================
+    # 첫 번째 배치도
+    # ==========================================
+
     st.markdown(
         "### 🗺️ AGF 2026 배치도"
     )
@@ -740,9 +743,10 @@ with page3:
 
         st.download_button(
             "📥 배치도 다운로드",
-            path.read_bytes(),
-            "AGF2026_배치도.jpg",
-            "image/jpeg"
+            data=path.read_bytes(),
+            file_name="AGF2026_배치도.jpg",
+            mime="image/jpeg",
+            use_container_width=True
         )
 
     else:
@@ -753,7 +757,10 @@ with page3:
 
     st.divider()
 
-    # 추가한 상세 배치도
+    # ==========================================
+    # 두 번째 상세 배치도
+    # ==========================================
+
     detailed = (
         ROOT / "assets" /
         "agf2026_floorplan_detailed.png"
@@ -773,4 +780,19 @@ with page3:
         st.caption(
             "업체별 부스 번호는 "
             "오른쪽 범례에서 확인할 수 있습니다."
+        )
+
+        # 두 번째 배치도 다운로드 버튼
+        st.download_button(
+            "📥 상세 배치도 다운로드",
+            data=detailed.read_bytes(),
+            file_name="AGF2026_상세배치도.png",
+            mime="image/png",
+            use_container_width=True
+        )
+
+    else:
+
+        st.info(
+            "상세 배치도 이미지가 없습니다."
         )
