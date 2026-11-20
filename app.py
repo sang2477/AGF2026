@@ -6,66 +6,48 @@ import streamlit as st
 
 
 # ==========================================
-# 1. 기본 설정
+# 기본 설정
 # ==========================================
 
 ROOT = Path(__file__).resolve().parent
 
 st.set_page_config(
-    page_title="AGF 2026 개인 굿즈 보관함",
+    page_title="AGF 2026 굿즈·이벤트 카탈로그",
     page_icon="🎁",
     layout="wide"
 )
 
-st.markdown(
-    """
-    <style>
+st.markdown("""
+<style>
+.block-container {
+    max-width: 1050px;
+    padding: 1rem 0.8rem;
+}
+@media (max-width: 650px) {
     .block-container {
-        max-width: 1050px;
-        padding: 1rem 0.8rem;
+        padding-top: 0.6rem;
     }
-
-    @media (max-width: 650px) {
-        .block-container {
-            padding-top: 0.6rem;
-        }
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+}
+</style>
+""", unsafe_allow_html=True)
 
 
 # ==========================================
-# 2. 데이터 불러오기
+# 데이터 불러오기
 # ==========================================
 
 def load():
     products = json.loads(
         (ROOT / "catalog.json").read_text(encoding="utf-8")
     )
-
     events = json.loads(
         (ROOT / "events.json").read_text(encoding="utf-8")
     )
-
     return products, events
 
 
 products, events = load()
 
-
-# ==========================================
-# 3. 장바구니 초기화
-# ==========================================
-
-if "cart" not in st.session_state:
-    st.session_state.cart = {}
-
-
-# ==========================================
-# 4. 이미지 표시 함수
-# ==========================================
 
 def picture(name):
     if not name:
@@ -74,42 +56,22 @@ def picture(name):
     path = ROOT / "assets" / name
 
     if path.is_file():
-        st.image(
-            str(path),
-            use_container_width=True
-        )
+        st.image(str(path), use_container_width=True)
+
+
+def price_text(product):
+    if product.get("price_tbd"):
+        return "가격 미정"
+
+    price = product.get("price")
+    if price is None:
+        return "가격 미정"
+
+    return f"{int(price):,}원"
 
 
 # ==========================================
-# 5. 장바구니 관리 함수
-# ==========================================
-
-def add_to_cart(pid):
-    qty = int(st.session_state.get(f"qty_{pid}", 0))
-
-    if qty > 0:
-        st.session_state.cart[pid] = qty
-        st.toast("장바구니에 반영했어!")
-    else:
-        st.session_state.cart.pop(pid, None)
-        st.toast("장바구니에서 제거했어!")
-
-
-def remove_one(pid):
-    current_qty = st.session_state.cart.get(pid, 0)
-
-    if current_qty > 1:
-        st.session_state.cart[pid] = current_qty - 1
-    else:
-        st.session_state.cart.pop(pid, None)
-
-
-def remove_all(pid):
-    st.session_state.cart.pop(pid, None)
-
-
-# ==========================================
-# 6. 공식 X 계정 목록
+# 공식 X 계정
 # ==========================================
 
 OFFICIAL_X_CATEGORIES = {
@@ -134,31 +96,30 @@ OFFICIAL_X_CATEGORIES = {
 
 
 # ==========================================
-# 7. 메인 화면
+# 메인 화면
 # ==========================================
 
 st.title("🎁 AGF 2026 굿즈·이벤트 카탈로그")
 
 st.caption(
-    "로그인 없음 · 개인정보 수집 없음 · 모바일 지원 · "
-    "장바구니는 현재 접속 세션에서만 유지됩니다."
+    "AGF 2026 참가 업체별 굿즈, 가격, "
+    "무료 이벤트 및 행사 정보를 확인하는 개인 카탈로그입니다."
 )
 
-t1, t2, t3, t4 = st.tabs(
-    [
-        "🛍️ 굿즈 카테고리",
-        "🧾 장바구니",
-        "🎁 무료·이벤트 카테고리",
-        "🗺️ 배치도",
-    ]
-)
+t1, t2, t3 = st.tabs([
+    "🛍️ 업체별 굿즈 카탈로그",
+    "🎁 무료·이벤트",
+    "🗺️ 배치도·공식 X"
+])
 
 
 # ==========================================
-# 8. 굿즈 카테고리
+# 1. 업체별 굿즈 카탈로그
 # ==========================================
 
 with t1:
+
+    st.subheader("🛍️ 업체별 굿즈 카탈로그")
 
     companies = sorted({
         p["company"] for p in products
@@ -172,17 +133,17 @@ with t1:
     a, b = st.columns(2)
 
     company = a.selectbox(
-        "업체",
+        "업체 선택",
         ["전체"] + companies
     )
 
     category = b.selectbox(
-        "카테고리",
+        "상품 카테고리",
         ["전체"] + categories
     )
 
     subcategories = sorted({
-        p.get("subcategory")
+        p["subcategory"]
         for p in products
         if p.get("subcategory")
         and (
@@ -191,17 +152,21 @@ with t1:
         )
     })
 
-    if subcategories:
-        subcategory = st.selectbox(
+    subcategory = (
+        st.selectbox(
             "내부 분류",
             ["전체"] + subcategories
         )
-    else:
-        subcategory = "전체"
+        if subcategories
+        else "전체"
+    )
 
-    query = st.text_input("상품 검색")
+    query = st.text_input(
+        "🔍 굿즈 검색",
+        placeholder="상품명 입력"
+    )
 
-    selected_products = [
+    filtered = [
         p for p in products
         if (
             company == "전체"
@@ -209,7 +174,7 @@ with t1:
         )
         and (
             category == "전체"
-            or p.get("category") == category
+            or (p.get("category") or "기타") == category
         )
         and (
             subcategory == "전체"
@@ -218,290 +183,94 @@ with t1:
         and query.lower() in p["name"].lower()
     ]
 
-    st.caption(
-        f"{len(selected_products)}개 상품"
-    )
+    st.caption(f"총 {len(filtered)}개 굿즈")
 
-    for p in selected_products:
+    if not filtered:
+        st.info("조건에 맞는 굿즈가 없습니다.")
 
-        with st.container(border=True):
+    for company_name in sorted({
+        p["company"] for p in filtered
+    }):
 
-            left, right = st.columns([1, 2])
+        st.markdown(f"### 🏷️ {company_name}")
 
-            with left:
-                picture(
-                    p.get("image_path", "")
-                )
+        company_products = [
+            p for p in filtered
+            if p["company"] == company_name
+        ]
 
-            with right:
+        for p in company_products:
 
-                st.markdown(
-                    f"**{p['name']}**"
-                )
+            with st.container(border=True):
 
-                sub_name = p.get("subcategory")
+                left, right = st.columns([1, 2])
 
-                sub_text = (
-                    f"{sub_name} · "
-                    if sub_name
-                    else ""
-                )
+                with left:
+                    picture(p.get("image_path", ""))
 
-                st.caption(
-                    f"{p['company']} · "
-                    f"{sub_text}"
-                    f"{p.get('category') or '기타'}"
-                )
+                with right:
 
-                if p.get("price_tbd"):
-                    st.write("**가격 미정**")
-                else:
-                    st.write(
-                        f"**{p['price']:,}원**"
+                    st.markdown(f"#### {p['name']}")
+
+                    info = [
+                        p.get("subcategory"),
+                        p.get("category") or "기타"
+                    ]
+
+                    st.caption(
+                        " · ".join(
+                            str(x) for x in info if x
+                        )
                     )
 
-                if p.get("spec"):
-                    st.caption(p["spec"])
+                    st.markdown(
+                        f"**💰 {price_text(p)}**"
+                    )
 
-                if p.get("description"):
-                    st.write(p["description"])
+                    if p.get("limit_qty"):
+                        st.caption(
+                            f"구매 제한: "
+                            f"1인 {p['limit_qty']}개"
+                        )
 
-                # 아주르 상세 사진은 표시하지 않음
-                if (
-                    p["company"] != "아주르 프로밀리아"
-                    and p.get("detail_images")
-                ):
-                    with st.expander(
-                        "📷 상세 사진 보기"
+                    if p.get("spec"):
+                        st.caption(p["spec"])
+
+                    if p.get("description"):
+                        st.write(p["description"])
+
+                    # 기존 아주르 상세 이미지 제외 설정 유지
+                    if (
+                        p["company"] != "아주르 프로밀리아"
+                        and p.get("detail_images")
                     ):
-                        for detail in p["detail_images"]:
-                            picture(detail)
+                        with st.expander("📷 상세 사진 보기"):
+                            for detail in p["detail_images"]:
+                                picture(detail)
 
-                if p.get("source"):
-                    st.link_button(
-                        "공식 공지",
-                        p["source"]
-                    )
-
-                pid = str(p["id"])
-
-                limit = (
-                    99
-                    if p.get("price_tbd")
-                    else int(p.get("limit_qty") or 99)
-                )
-
-                # 위젯 생성 시에만 초기값 설정
-                qty_key = f"qty_{pid}"
-
-                if qty_key not in st.session_state:
-                    st.session_state[qty_key] = int(
-                        st.session_state.cart.get(pid, 0)
-                    )
-
-                st.number_input(
-                    "장바구니 수량",
-                    min_value=0,
-                    max_value=max(1, limit),
-                    step=1,
-                    key=qty_key
-                )
-
-                st.button(
-                    "🛒 장바구니 넣기",
-                    key=f"save_{pid}",
-                    on_click=add_to_cart,
-                    args=(pid,),
-                    use_container_width=True
-                )
+                    if p.get("source"):
+                        st.link_button(
+                            "🔗 공식 상품 공지",
+                            p["source"],
+                            use_container_width=True
+                        )
 
 
 # ==========================================
-# 9. 장바구니
+# 2. 무료·이벤트 카테고리
 # ==========================================
 
 with t2:
 
-    cart = st.session_state.cart
-
-    cart_products = [
-        p for p in products
-        if cart.get(str(p["id"]), 0) > 0
-    ]
-
-    total = sum(
-        p["price"] * cart[str(p["id"])]
-        for p in cart_products
-        if not p.get("price_tbd")
-    )
-
-    total_qty = sum(
-        cart[str(p["id"])]
-        for p in cart_products
-    )
-
-    a, b, c = st.columns(3)
-
-    a.metric(
-        "상품 종류",
-        len(cart_products)
-    )
-
-    b.metric(
-        "총 수량",
-        total_qty
-    )
-
-    c.metric(
-        "확정 금액",
-        f"{total:,}원"
-    )
-
-    if any(
-        p.get("price_tbd")
-        for p in cart_products
-    ):
-        st.warning(
-            "가격 미정 상품은 합계에서 제외했어."
-        )
-
-    rows = []
-
-    for p in cart_products:
-
-        pid = str(p["id"])
-        qty = cart[pid]
-
-        rows.append({
-            "업체": p["company"],
-            "상품": p["name"],
-            "수량": qty,
-            "단가": (
-                "미정"
-                if p.get("price_tbd")
-                else p["price"]
-            ),
-            "소계": (
-                "미정"
-                if p.get("price_tbd")
-                else p["price"] * qty
-            )
-        })
-
-    if rows:
-
-        st.dataframe(
-            rows,
-            hide_index=True,
-            use_container_width=True
-        )
-
-        st.subheader(
-            "🛒 장바구니 상품 관리"
-        )
-
-        for p in cart_products:
-
-            pid = str(p["id"])
-            qty = cart.get(pid, 0)
-
-            if qty <= 0:
-                continue
-
-            name_col, minus_col, delete_col = st.columns(
-                [5, 2, 2]
-            )
-
-            with name_col:
-                st.write(
-                    f"{p['name']} · {qty}개"
-                )
-
-            with minus_col:
-
-                if st.button(
-                    "➖ 1개 삭제",
-                    key=f"minus_{pid}",
-                    use_container_width=True
-                ):
-                    remove_one(pid)
-                    st.rerun()
-
-            with delete_col:
-
-                if st.button(
-                    "🗑️ 전체 삭제",
-                    key=f"delete_{pid}",
-                    use_container_width=True
-                ):
-                    remove_all(pid)
-                    st.rerun()
-
-    else:
-        st.info(
-            "아직 선택한 굿즈가 없어."
-        )
-
-    # 구매 특전 안내
-    genie_sum = sum(
-        p["price"] * cart[str(p["id"])]
-        for p in cart_products
-        if p.get("subcategory") == "지니뮤직 콜라보"
-    )
-
-    if genie_sum > 0:
-        st.info(
-            "지니뮤직 콜라보 구매 특전: "
-            "구매자 전원 타이틀별 특전 제공 "
-            "(현장 수량 한정)"
-        )
-
-    if genie_sum >= 100000:
-        st.success(
-            "지니뮤직 부스 구매금액 10만 원 이상: "
-            "쇼핑백 추가 증정 대상 "
-            "(소진 시 종료)"
-        )
-
-    if any(
-        p["company"] == "아스트라에 오라티오"
-        for p in cart_products
-    ):
-        st.caption(
-            "아스트라에 오라티오 굿즈 구매 특전: "
-            "타포린 백 (현장 조건 확인)"
-        )
-
-    if any(
-        p["company"] == "아스트라에 오라티오"
-        and p["name"] == "티저 아트북"
-        for p in cart_products
-    ):
-        st.caption(
-            "티저 아트북 구매 특전: "
-            "클리어 파일 백 (현장 조건 확인)"
-        )
-
-
-# ==========================================
-# 10. 무료·이벤트 카테고리
-# ==========================================
-
-with t3:
-
-    st.subheader(
-        "🎁 무료·이벤트 카테고리"
-    )
+    st.subheader("🎁 무료·이벤트 카테고리")
 
     st.caption(
-        "무료 배포 · 스탬프 랠리 · 경품 수령 · "
-        "구매 특전을 한눈에 볼 수 있는 안내판이야. "
-        "현장 참여 조건은 공식 공지를 확인해 줘."
+        "무료 배포, 스탬프 랠리, 경품 수령, "
+        "구매 특전 정보를 확인할 수 있습니다."
     )
 
     event_companies = sorted({
-        e["company"]
-        for e in events
+        e["company"] for e in events
     })
 
     event_kinds = [
@@ -515,8 +284,7 @@ with t3:
 
     event_company = a.selectbox(
         "게임 / 업체",
-        ["전체"] + event_companies,
-        key="event_company"
+        ["전체"] + event_companies
     )
 
     event_kind = b.selectbox(
@@ -527,13 +295,11 @@ with t3:
                 e.get("kind") == k
                 for e in events
             )
-        ],
-        key="event_kind"
+        ]
     )
 
     event_query = st.text_input(
-        "이벤트 검색",
-        key="event_search",
+        "🔍 이벤트 검색",
         placeholder="쇼핑백, 스탬프, 핫팩..."
     )
 
@@ -551,24 +317,24 @@ with t3:
     ]
 
     st.caption(
-        f"표시 중 {len(matching)}개 이벤트"
+        f"총 {len(matching)}개 이벤트"
     )
 
-    for company in sorted({
-        e["company"]
-        for e in matching
+    if not matching:
+        st.info("조건에 맞는 이벤트가 없습니다.")
+
+    for company_name in sorted({
+        e["company"] for e in matching
     }):
 
-        st.markdown(
-            f"#### {company}"
-        )
+        st.markdown(f"### 🎮 {company_name}")
 
         group = [
             e for e in matching
-            if e["company"] == company
+            if e["company"] == company_name
         ]
 
-        if company == "아주르 프로밀리아":
+        if company_name == "아주르 프로밀리아":
 
             with st.expander(
                 "🖼️ 아주르 이벤트 안내 이미지 3장",
@@ -576,8 +342,7 @@ with t3:
             ):
 
                 st.caption(
-                    "특별 교역소 · 스탬프 랠리 보상 · "
-                    "미션 안내"
+                    "특별 교역소 · 스탬프 랠리 보상 · 미션 안내"
                 )
 
                 for img in (
@@ -602,16 +367,17 @@ with t3:
                     f"**{e['title']}**"
                 )
 
+                if e.get("description"):
+                    st.write(e["description"])
+
                 if e.get("source"):
                     st.link_button(
                         "🔗 공식 이벤트 안내",
-                        e["source"]
+                        e["source"],
+                        use_container_width=True
                     )
 
-    if not matching:
-        st.info(
-            "선택한 조건에 맞는 이벤트가 없어."
-        )
+    st.divider()
 
     st.caption(
         "지니뮤직 구매 특전: 12월 4~6일, "
@@ -623,50 +389,37 @@ with t3:
 
     st.caption(
         "현장 재고 및 참여 조건은 "
-        "공식 공지를 확인해 줘."
+        "공식 공지를 확인해 주세요."
     )
 
 
 # ==========================================
-# 11. 배치도 및 공식 X
+# 3. 배치도 및 공식 X
 # ==========================================
 
-with t4:
+with t3:
 
-    st.subheader(
-        "🗺️ AGF 2026 전체 배치도"
-    )
+    st.subheader("🗺️ AGF 2026 전체 배치도")
 
-    picture(
-        "agf2026_floorplan.jpg"
-    )
+    picture("agf2026_floorplan.jpg")
 
-    path = (
-        ROOT
-        / "assets"
-        / "agf2026_floorplan.jpg"
-    )
+    path = ROOT / "assets" / "agf2026_floorplan.jpg"
 
     if path.exists():
-
         st.download_button(
-            "배치도 다운로드",
+            "📥 배치도 다운로드",
             path.read_bytes(),
             "AGF2026_배치도.jpg",
             "image/jpeg"
         )
 
-    # AGF 공식 X
     st.divider()
 
-    st.subheader(
-        "📢 AGF 2026 공식 계정"
-    )
+    st.subheader("📢 AGF 2026 공식 계정")
 
     st.info(
-        "AGF 2026의 참가 업체, 부스 배치도, "
-        "이벤트 및 행사 공지사항을 "
-        "확인할 수 있습니다."
+        "AGF 2026 참가 업체, 행사 공지, "
+        "배치도 및 이벤트 정보를 확인할 수 있습니다."
     )
 
     st.link_button(
@@ -675,23 +428,13 @@ with t4:
         use_container_width=True
     )
 
-    # 참가 업체 공식 X
     st.divider()
 
-    st.subheader(
-        "🔗 AGF 참가 업체 공식 X"
-    )
+    st.subheader("🔗 AGF 참가 업체 공식 X")
 
-    st.caption(
-        "게임 및 피규어·굿즈 샵으로 분류한 "
-        "공식 계정 모음입니다."
-    )
+    for group_name, accounts in OFFICIAL_X_CATEGORIES.items():
 
-    for group, accounts in OFFICIAL_X_CATEGORIES.items():
-
-        st.markdown(
-            f"### {group}"
-        )
+        st.markdown(f"### {group_name}")
 
         cols = st.columns(2)
 
@@ -701,9 +444,7 @@ with t4:
 
                 with st.container(border=True):
 
-                    st.markdown(
-                        f"**{name}**"
-                    )
+                    st.markdown(f"**{name}**")
 
                     st.link_button(
                         "공식 X 방문 ↗",
