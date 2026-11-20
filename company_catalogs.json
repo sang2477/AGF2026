@@ -1,0 +1,194 @@
+{
+  "아스트라에 오라티오": {
+    "x_url": "https://x.com/Asora_KR",
+    "sales_images": [
+      "asora_goods.png"
+    ],
+    "event_images": [
+      "asora_free.png",
+      "asora_bonus.png"
+    ],
+    "group": "🎮 게임",
+    "related_catalogs": []
+  },
+  "아주르 프로밀리아": {
+    "x_url": "https://x.com/AzurPromiliaKR",
+    "sales_images": [
+      "azur_goods_new.png",
+      "azur_goods_original.jpg"
+    ],
+    "event_images": [
+      "azur_event_prizes_new.png",
+      "azur_event_rewards_new.png",
+      "azur_event_missions_new.png"
+    ],
+    "group": "🎮 게임",
+    "related_catalogs": []
+  },
+  "승리의 여신: 니케": {
+    "x_url": "https://x.com/NIKKE_kr",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎮 게임",
+    "related_catalogs": [
+      {
+        "company": "지니뮤직",
+        "title": "지니뮤직 — 니케 관련 판매 카탈로그",
+        "sales_images": [
+          "genie_goods_poster.jpg"
+        ],
+        "event_images": [
+          "genie_benefits.jpg"
+        ],
+        "note": "지니뮤직의 종합 안내 이미지입니다. 니케 외 상품이 포함될 수 있으니 이미지 내 상품명을 확인하세요."
+      }
+    ]
+  },
+  "트릭컬 리바이브": {
+    "x_url": "https://x.com/Trickcal_Re",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎮 게임",
+    "related_catalogs": []
+  },
+  "홀로라이브 드림스": {
+    "x_url": "https://x.com/holo_dreams_en",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "니벨아레나": {
+    "x_url": "https://x.com/NivelArena",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎮 게임",
+    "related_catalogs": []
+  },
+  "요스타": {
+    "x_url": "https://x.com/YostarStoreKR",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "amiami": {
+    "x_url": "https://x.com/amiami_figure",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "애니플러스": {
+    "x_url": "https://x.com/ANIPLUS_SHOP",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "애니메이트": {
+    "x_url": "https://x.com/animateonlineKR",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "한림사": {
+    "x_url": "https://x.com/hanlimsa",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "GNFTOYZ": {
+    "x_url": "https://x.com/GNFTOYZ",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "지니뮤직": {
+    "x_url": "https://x.com/genie_kt",
+    "sales_images": [
+      "genie_goods_poster.jpg",
+      "genie_arkvive.jpg",
+      "genie_stellar_blade.jpg",
+      "genie_cd_player.jpg"
+    ],
+    "event_images": [
+      "genie_benefits.jpg"
+    ],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "서울미디어코믹스": {
+    "x_url": "https://x.com/smg_comic",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "메이크드라마": {
+    "x_url": "https://x.com/MAkeDrama_KR",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "YNK미디어": {
+    "x_url": "https://x.com/YNKMEDIA_X",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "소미미디어": {
+    "x_url": "https://x.com/SomyMedia",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "작혼": {
+    "x_url": "https://x.com/MahjongSoul_KR",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎮 게임",
+    "related_catalogs": []
+  },
+  "스텔라 소라": {
+    "x_url": "https://x.com/StellaSoraKR",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎮 게임",
+    "related_catalogs": []
+  },
+  "스토브": {
+    "x_url": "https://x.com/sgstove",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎮 게임",
+    "related_catalogs": []
+  },
+  "학산문화사": {
+    "x_url": "https://x.com/haksan_comic",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "애니메이트 홍대": {
+    "x_url": "https://x.com/animate_hongdae",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "브라운더스트2": {
+    "x_url": "https://x.com/BROWNDUST2_KR",
+    "sales_images": [],
+    "event_images": [],
+    "group": "🎮 게임",
+    "related_catalogs": []
+  }
+}
