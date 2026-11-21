@@ -1,32 +1,20 @@
+
 {
   "아스트라에 오라티오": {
     "x_url": "https://x.com/Asora_KR",
-    "sales_images": [
-      "new_09_sales_images_01.jpg"
-    ],
-    "event_images": [
-      "new_09_event_images_01.jpg",
-      "new_09_event_images_02.jpg"
-    ],
+    "sales_images": ["new_09_sales_images_01.jpg"],
+    "event_images": ["new_09_event_images_01.jpg", "new_09_event_images_02.jpg"],
     "group": "🎮 게임",
     "related_catalogs": [],
-    "banner_images": [
-      "new_09_banner_images_01.jpg"
-    ]
+    "banner_images": ["new_09_banner_images_01.jpg"]
   },
   "아주르 프로밀리아": {
     "x_url": "https://x.com/AzurPromiliaKR",
-    "sales_images": [
-      "new_10_sales_images_01.png"
-    ],
-    "event_images": [
-      "new_10_event_images_01.png"
-    ],
+    "sales_images": ["new_10_sales_images_01.png"],
+    "event_images": ["new_10_event_images_01.png"],
     "group": "🎮 게임",
     "related_catalogs": [],
-    "banner_images": [
-      "new_10_banner_images_01.jpg"
-    ]
+    "banner_images": ["new_10_banner_images_01.jpg"]
   },
   "승리의 여신: 니케": {
     "x_url": "https://x.com/NIKKE_kr",
@@ -37,18 +25,19 @@
       {
         "company": "지니뮤직",
         "title": "지니뮤직 — 니케 관련 판매 카탈로그",
-        "sales_images": [
-          "genie_goods_poster.jpg"
-        ],
-        "event_images": [
-          "genie_benefits.jpg"
-        ],
+        "sales_images": ["genie_goods_poster.jpg"],
+        "event_images": ["genie_benefits.jpg"],
         "note": "지니뮤직의 종합 안내 이미지입니다. 니케 외 상품이 포함될 수 있으니 이미지 내 상품명을 확인하세요."
+      },
+      {
+        "company": "GNFTOYZ × 솜꼬리",
+        "title": "GNFTOYZ × 솜꼬리 — 니케 라이선싱 굿즈",
+        "sales_images": ["gnftoyz_nikke_agf2026_goods.jpg"],
+        "event_images": [],
+        "note": "AGF 2026 킨텍스 제1전시장 1홀 C25 부스 · 12월 4~6일 판매 안내"
       }
     ],
-    "banner_images": [
-      "new_08_banner_images_01.jpg"
-    ]
+    "banner_images": ["new_08_banner_images_01.jpg"]
   },
   "트릭컬 리바이브": {
     "x_url": "https://x.com/Trickcal_Re",
@@ -56,9 +45,7 @@
     "event_images": [],
     "group": "🎮 게임",
     "related_catalogs": [],
-    "banner_images": [
-      "new_14_banner_images_01.webp"
-    ]
+    "banner_images": ["new_14_banner_images_01.webp"]
   },
   "홀로라이브 드림스": {
     "x_url": "https://x.com/holo_dreams_en",
@@ -82,9 +69,7 @@
     "event_images": [],
     "group": "🎮 게임",
     "related_catalogs": [],
-    "banner_images": [
-      "new_00_banner_images_01.jpg"
-    ]
+    "banner_images": ["new_00_banner_images_01.jpg"]
   },
   "요스타": {
     "x_url": "https://x.com/YostarStoreKR",
@@ -93,11 +78,7 @@
     "group": "🎮 게임",
     "related_catalogs": [],
     "banner_images": [],
-    "children": [
-      "작혼",
-      "명일방주",
-      "스텔라 소라"
-    ]
+    "children": ["작혼", "명일방주", "스텔라 소라"]
   },
   "amiami": {
     "x_url": "https://x.com/amiami_figure",
@@ -121,9 +102,7 @@
       "new_12_sales_images_09.jpg",
       "new_12_sales_images_10.jpg"
     ],
-    "event_images": [
-      "new_12_event_images_01.jpg"
-    ],
+    "event_images": ["new_12_event_images_01.jpg"],
     "group": "🎨 피규어·애니",
     "related_catalogs": [],
     "banner_images": []
@@ -149,14 +128,6 @@
       "new_11_banner_images_02.jpg"
     ]
   },
-  "한림사": {
-    "x_url": "https://x.com/hanlimsa",
-    "sales_images": [],
-    "event_images": [],
-    "group": "🎨 피규어·애니",
-    "related_catalogs": [],
-    "banner_images": []
-  },
   "GNFTOYZ": {
     "x_url": "https://x.com/GNFTOYZ",
     "sales_images": [],
@@ -173,33 +144,7 @@
       "genie_stellar_blade.jpg",
       "genie_cd_player.jpg"
     ],
-    "event_images": [
-      "genie_benefits.jpg"
-    ],
-    "group": "🎨 피규어·애니",
-    "related_catalogs": [],
-    "banner_images": []
-  },
-  "서울미디어코믹스": {
-    "x_url": "https://x.com/smg_comic",
-    "sales_images": [],
-    "event_images": [],
-    "group": "🎨 피규어·애니",
-    "related_catalogs": [],
-    "banner_images": []
-  },
-  "메이크드라마": {
-    "x_url": "https://x.com/MAkeDrama_KR",
-    "sales_images": [],
-    "event_images": [],
-    "group": "🎨 피규어·애니",
-    "related_catalogs": [],
-    "banner_images": []
-  },
-  "YNK미디어": {
-    "x_url": "https://x.com/YNKMEDIA_X",
-    "sales_images": [],
-    "event_images": [],
+    "event_images": ["genie_benefits.jpg"],
     "group": "🎨 피규어·애니",
     "related_catalogs": [],
     "banner_images": []
@@ -220,37 +165,23 @@
     ],
     "group": "🎨 피규어·애니",
     "related_catalogs": [],
-    "banner_images": [
-      "new_06_banner_images_01.jpg"
-    ]
+    "banner_images": ["new_06_banner_images_01.jpg"]
   },
   "작혼": {
     "x_url": "https://x.com/MahjongSoul_KR",
-    "sales_images": [
-      "new_02_sales_images_01.jpg"
-    ],
-    "event_images": [
-      "new_02_event_images_01.jpg"
-    ],
+    "sales_images": ["new_02_sales_images_01.jpg"],
+    "event_images": ["new_02_event_images_01.jpg"],
     "group": "🎮 게임",
     "related_catalogs": [],
-    "banner_images": [
-      "new_02_banner_images_01.jpg"
-    ]
+    "banner_images": ["new_02_banner_images_01.jpg"]
   },
   "스텔라 소라": {
     "x_url": "https://x.com/StellaSoraKR",
-    "sales_images": [
-      "new_04_sales_images_01.jpg"
-    ],
-    "event_images": [
-      "new_04_event_images_01.jpg"
-    ],
+    "sales_images": ["new_04_sales_images_01.jpg"],
+    "event_images": ["new_04_event_images_01.jpg"],
     "group": "🎮 게임",
     "related_catalogs": [],
-    "banner_images": [
-      "new_04_banner_images_01.jpg"
-    ]
+    "banner_images": ["new_04_banner_images_01.jpg"]
   },
   "학산문화사": {
     "x_url": "https://x.com/haksan_comic",
@@ -258,9 +189,7 @@
     "event_images": [],
     "group": "🎮 게임",
     "related_catalogs": [],
-    "banner_images": [
-      "new_01_banner_images_01.jpg"
-    ]
+    "banner_images": ["new_01_banner_images_01.jpg"]
   },
   "브라운더스트2": {
     "x_url": "https://x.com/BROWNDUST2_KR",
@@ -268,19 +197,18 @@
     "event_images": [],
     "group": "🎮 게임",
     "related_catalogs": [],
-    "banner_images": []
+    "banner_images": [
+      "browndust2_christmas_banner.jfif",
+      "browndust2_booth_a12_banner.jfif"
+    ]
   },
   "명일방주": {
     "x_url": "https://x.com/ArknightsKorea",
     "sales_images": [],
-    "event_images": [
-      "new_03_event_images_01.jpg"
-    ],
+    "event_images": ["new_03_event_images_01.jpg"],
     "group": "🎮 게임",
     "related_catalogs": [],
-    "banner_images": [
-      "new_03_banner_images_01.jpg"
-    ]
+    "banner_images": ["new_03_banner_images_01.jpg"]
   },
   "이스타에그": {
     "x_url": "https://x.com/E_staregg",
@@ -289,22 +217,16 @@
       "new_13_sales_images_02.jpg",
       "new_13_sales_images_03.jpg"
     ],
-    "event_images": [
-      "new_13_event_images_01.jpg"
-    ],
+    "event_images": ["new_13_event_images_01.jpg"],
     "group": "🎨 피규어·애니",
     "related_catalogs": [],
-    "banner_images": [
-      "new_13_banner_images_01.jpg"
-    ]
+    "banner_images": ["new_13_banner_images_01.jpg"]
   },
   "소녀전선: 블루코버넌트": {
     "x_url": "",
     "sales_images": [],
     "event_images": [],
-    "banner_images": [
-      "new_05_banner_images_01.jpg"
-    ],
+    "banner_images": ["new_05_banner_images_01.jpg"],
     "group": "🎮 게임",
     "related_catalogs": []
   },
@@ -315,9 +237,22 @@
     "banner_images": [],
     "group": "🎮 게임",
     "related_catalogs": [],
-    "children": [
-      "니벨아레나",
-      "학산문화사"
-    ]
+    "children": ["니벨아레나", "학산문화사"]
+  },
+  "스마일게이트": {
+    "x_url": "https://x.com/Smilegate",
+    "sales_images": [
+      "new_07_sales_images_01.jpg",
+      "new_07_sales_images_02.jpg"
+    ],
+    "event_images": [],
+    "banner_images": [
+      "new_07_banner_images_04.jpg",
+      "new_07_banner_images_01.jpg",
+      "new_07_banner_images_02.jpg",
+      "new_07_banner_images_03.jpg"
+    ],
+    "group": "🎮 게임",
+    "related_catalogs": []
   }
 }
