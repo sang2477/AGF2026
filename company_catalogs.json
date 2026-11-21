@@ -241,16 +241,45 @@
   },
   "스마일게이트": {
     "x_url": "https://x.com/Smilegate",
+    "sales_images": [],
+    "event_images": [],
+    "banner_images": [],
+    "group": "🎮 게임",
+    "related_catalogs": [],
+    "children": ["카제나", "미래시", "러브 딜리버리"]
+  },
+  "카제나": {
+    "x_url": "",
+    "sales_images": [],
+    "event_images": [],
+    "banner_images": [
+      "new_07_banner_images_01.jpg",
+      "new_07_banner_images_02.jpg"
+    ],
+    "group": "🎮 게임",
+    "related_catalogs": []
+  },
+  "미래시": {
+    "x_url": "",
+    "sales_images": [],
+    "event_images": [],
+    "banner_images": [
+      "new_07_banner_images_01.jpg",
+      "new_07_banner_images_02.jpg"
+    ],
+    "group": "🎮 게임",
+    "related_catalogs": []
+  },
+  "러브 딜리버리": {
+    "x_url": "",
     "sales_images": [
       "new_07_sales_images_01.jpg",
       "new_07_sales_images_02.jpg"
     ],
     "event_images": [],
     "banner_images": [
-      "new_07_banner_images_04.jpg",
-      "new_07_banner_images_01.jpg",
-      "new_07_banner_images_02.jpg",
-      "new_07_banner_images_03.jpg"
+      "new_07_banner_images_03.jpg",
+      "new_07_banner_images_04.jpg"
     ],
     "group": "🎮 게임",
     "related_catalogs": []
