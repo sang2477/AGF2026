@@ -252,14 +252,6 @@
       "new_04_banner_images_01.jpg"
     ]
   },
-  "스토브": {
-    "x_url": "https://x.com/sgstove",
-    "sales_images": [],
-    "event_images": [],
-    "group": "🎮 게임",
-    "related_catalogs": [],
-    "banner_images": []
-  },
   "학산문화사": {
     "x_url": "https://x.com/haksan_comic",
     "sales_images": [],
@@ -269,14 +261,6 @@
     "banner_images": [
       "new_01_banner_images_01.jpg"
     ]
-  },
-  "애니메이트 홍대": {
-    "x_url": "https://x.com/animate_hongdae",
-    "sales_images": [],
-    "event_images": [],
-    "group": "🎨 피규어·애니",
-    "related_catalogs": [],
-    "banner_images": []
   },
   "브라운더스트2": {
     "x_url": "https://x.com/BROWNDUST2_KR",
@@ -335,21 +319,5 @@
       "니벨아레나",
       "학산문화사"
     ]
-  },
-  "스마일게이트": {
-    "x_url": "https://x.com/Smilegate",
-    "sales_images": [
-      "new_07_sales_images_01.jpg",
-      "new_07_sales_images_02.jpg"
-    ],
-    "event_images": [],
-    "banner_images": [
-      "new_07_banner_images_04.jpg",
-      "new_07_banner_images_01.jpg",
-      "new_07_banner_images_02.jpg",
-      "new_07_banner_images_03.jpg"
-    ],
-    "group": "🎮 게임",
-    "related_catalogs": []
   }
 }
