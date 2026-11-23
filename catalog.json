@@ -405,5 +405,29 @@
     "image_path": "new_12_sales_images_08.jpg",
     "category": "굿즈",
     "price_tbd": 0
+  },
+  {
+    "id": 34,
+    "company": "니벨아레나",
+    "name": "스텔라 블레이드 니벨아레나 담요",
+    "price": 29000,
+    "spec": "",
+    "limit_qty": null,
+    "source": "AGF 2026 사용자 제공 공식 판매 안내 이미지: nivel_stellar_blade_blanket.jpg",
+    "image_path": "nivel_stellar_blade_blanket.jpg",
+    "category": "굿즈",
+    "price_tbd": 0
+  },
+  {
+    "id": 35,
+    "company": "니벨아레나",
+    "name": "스텔라 블레이드 니벨아레나 아크릴 스탠드",
+    "price": 30000,
+    "spec": "",
+    "limit_qty": null,
+    "source": "AGF 2026 사용자 제공 공식 판매 안내 이미지: nivel_stellar_blade_acrylic_stand.jpg",
+    "image_path": "nivel_stellar_blade_acrylic_stand.jpg",
+    "category": "굿즈",
+    "price_tbd": 0
   }
 ]
