@@ -92,7 +92,11 @@
       "nivel_stellar_blade_blanket.jpg",
       "nivel_stellar_blade_acrylic_stand.jpg"
     ],
-    "event_images": [],
+    "event_images": [
+      "update_f1f0e66704a0f782.jpg",
+      "update_20c79a9b7d0ca912.jpg",
+      "update_aed59bdbc85fb569.jpg"
+    ],
     "group": "🎮 게임",
     "related_catalogs": [],
     "banner_images": [
@@ -168,7 +172,9 @@
     "event_images": [],
     "group": "🎨 피규어·애니",
     "related_catalogs": [],
-    "banner_images": []
+    "banner_images": [
+      "gnftoyz_nikke_agf2026_goods.jpg"
+    ]
   },
   "지니뮤직": {
     "x_url": "https://x.com/genie_kt",
@@ -235,7 +241,19 @@
   "학산문화사": {
     "x_url": "https://x.com/haksan_comic",
     "sales_images": [],
-    "event_images": [],
+    "event_images": [
+      "update_2ab9607ed157f01b.jpg",
+      "update_4c4e3590abf85d50.jpg",
+      "update_4ae5b17f7750609b.jpg",
+      "update_20a0ffed326604dc.jpg",
+      "update_f222d9ca584d8bc8.jpg",
+      "update_357191f401f4ec5a.jpg",
+      "update_f50702e648f53597.jpg",
+      "update_d79497698b8ba19c.jpg",
+      "update_4e0a1c037c0ddeab.jpg",
+      "update_d91fec2b5c47847d.jpg",
+      "update_ee5c4236bb014c42.jpg"
+    ],
     "group": "🎮 게임",
     "related_catalogs": [],
     "banner_images": [
@@ -250,7 +268,8 @@
     "related_catalogs": [],
     "banner_images": [
       "browndust2_christmas_banner.jfif",
-      "browndust2_booth_a12_banner.jfif"
+      "browndust2_booth_a12_banner.jfif",
+      "update_a28dc74f8f1d900d.jfif"
     ]
   },
   "명일방주": {
@@ -295,9 +314,9 @@
     "x_url": "https://x.com/DaewonMedia",
     "sales_images": [],
     "event_images": [],
-    "banner_images": [],
     "group": "🎮 게임",
     "related_catalogs": [],
+    "banner_images": [],
     "children": [
       "니벨아레나",
       "학산문화사"
@@ -307,7 +326,10 @@
     "x_url": "https://x.com/Smilegate",
     "sales_images": [],
     "event_images": [],
-    "banner_images": [],
+    "banner_images": [
+      "new_07_banner_images_01.jpg",
+      "new_07_banner_images_04.jpg"
+    ],
     "group": "🎮 게임",
     "related_catalogs": [],
     "children": [
@@ -319,10 +341,13 @@
   "카제나": {
     "x_url": "",
     "sales_images": [],
-    "event_images": [],
+    "event_images": [
+      "update_e8e0a03a735c855c.jpg"
+    ],
     "banner_images": [
       "new_07_banner_images_01.jpg",
-      "new_07_banner_images_02.jpg"
+      "new_07_banner_images_02.jpg",
+      "update_43c0f5f7567076ea.jpg"
     ],
     "group": "🎮 게임",
     "related_catalogs": []
@@ -330,10 +355,14 @@
   "미래시": {
     "x_url": "",
     "sales_images": [],
-    "event_images": [],
+    "event_images": [
+      "update_9eeff21750eddf59.jpg",
+      "update_6ca5b9db3b0efd81.jpg"
+    ],
     "banner_images": [
       "new_07_banner_images_01.jpg",
-      "new_07_banner_images_02.jpg"
+      "new_07_banner_images_02.jpg",
+      "update_f7c9c807389932a3.jpg"
     ],
     "group": "🎮 게임",
     "related_catalogs": []
@@ -348,6 +377,52 @@
     "banner_images": [
       "new_07_banner_images_03.jpg",
       "new_07_banner_images_04.jpg"
+    ],
+    "group": "🎮 게임",
+    "related_catalogs": []
+  },
+  "굿스마일": {
+    "x_url": "",
+    "sales_images": [
+      "update_0cca2dca5991e983.jpg",
+      "update_cb961cd213b264ea.jpg",
+      "update_19f664fe72021f64.jpg"
+    ],
+    "event_images": [
+      "update_857226b972b76bcf.jpg"
+    ],
+    "banner_images": [
+      "update_b0050476f8576abe.jpg"
+    ],
+    "group": "🎨 피규어·애니",
+    "related_catalogs": []
+  },
+  "실버 팰리스": {
+    "x_url": "",
+    "sales_images": [
+      "update_6c4deea410ca1a00.jpg"
+    ],
+    "event_images": [
+      "update_da1540303ae337e4.jpg",
+      "update_2dff67c5f92ee0d9.jpg"
+    ],
+    "banner_images": [
+      "update_aae688212174d58a.jpg",
+      "update_3c8fb611054da218.jpg"
+    ],
+    "group": "🎮 게임",
+    "related_catalogs": []
+  },
+  "페그오": {
+    "x_url": "",
+    "sales_images": [],
+    "event_images": [
+      "update_eba5fbf028ba5332.png"
+    ],
+    "banner_images": [
+      "update_832712e3a3287c42.png",
+      "update_69ae47b24423b340.png",
+      "update_212cb51338ddc563.png"
     ],
     "group": "🎮 게임",
     "related_catalogs": []
