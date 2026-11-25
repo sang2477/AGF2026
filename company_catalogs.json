@@ -168,7 +168,9 @@
   },
   "GNFTOYZ": {
     "x_url": "https://x.com/GNFTOYZ",
-    "sales_images": [],
+    "sales_images": [
+      "gnftoyz_nikke_agf2026_goods.jpg"
+    ],
     "event_images": [],
     "group": "🎨 피규어·애니",
     "related_catalogs": [],
@@ -339,7 +341,7 @@
     ]
   },
   "카제나": {
-    "x_url": "",
+    "x_url": "https://x.com/CZN_Official_KR",
     "sales_images": [],
     "event_images": [
       "update_e8e0a03a735c855c.jpg"
@@ -381,8 +383,8 @@
     "group": "🎮 게임",
     "related_catalogs": []
   },
-  "굿스마일": {
-    "x_url": "",
+  "굿스마일 컴퍼니": {
+    "x_url": "https://x.com/GoodsmileP",
     "sales_images": [
       "update_0cca2dca5991e983.jpg",
       "update_cb961cd213b264ea.jpg",
@@ -398,7 +400,7 @@
     "related_catalogs": []
   },
   "실버 팰리스": {
-    "x_url": "",
+    "x_url": "https://x.com/SilverPalace_KO",
     "sales_images": [
       "update_6c4deea410ca1a00.jpg"
     ],
@@ -414,7 +416,7 @@
     "related_catalogs": []
   },
   "페그오": {
-    "x_url": "",
+    "x_url": "https://x.com/FateGO_KR",
     "sales_images": [],
     "event_images": [
       "update_eba5fbf028ba5332.png"
